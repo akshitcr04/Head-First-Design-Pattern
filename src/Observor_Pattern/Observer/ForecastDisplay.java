@@ -28,10 +28,10 @@ public class ForecastDisplay implements Observer, DisplayElement {
     }
 
     @Override
-    public void update(float temp, float pressure, float humidity) {
-        this.temp = temp;
-        this.pressure = pressure;
-        this.humidity = humidity;
+    public void update() {
+        this.temp = weatherData.getTemp();
+        this.humidity = weatherData.getHumidity();
+        this.pressure = weatherData.getPressure();
         display();
     }
 }

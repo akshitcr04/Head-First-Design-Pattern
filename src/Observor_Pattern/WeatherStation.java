@@ -11,5 +11,9 @@ public class WeatherStation {
         ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
         weatherData.setMeasurement(80, 65, 30.4f);
         weatherData.setMeasurement(22, 25, 10.4f);
+
+        weatherData.removeObserver(forecastDisplay);
+
+        weatherData.setMeasurement(22,22,22);
     }
 }
